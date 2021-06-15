@@ -10,7 +10,9 @@ const routes= {
 
 app.use(express.urlencoded({ extended: true }));
 
-
+app.get("/",function(req,res){
+    return res.json("halo")
+})
 app.use('/api/users', routes.user); //route untuk pakai mysql raw
  //route untuk pakai mysql + promise
  app.use('/api/transaksi', routes.transaksi); 
